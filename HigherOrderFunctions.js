@@ -84,3 +84,22 @@ function oneMoreHello(){
 //setInterval(oneMoreHello,1000);
 setTimeout(oneMoreHello,2000);
 
+
+
+//scope in javascript
+ function fun(){
+    var a=1;
+    console.log(`This is function 1 ${a}` );
+    function fun2(){
+    //    var a=2;
+        console.log(`This is function 2 ${a}`);
+
+    }
+
+
+    fun2()
+ }
+
+ fun()
+
+
