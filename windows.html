@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="loc">
+    </div>
+
+    <script>
+      let loc = document.getElementById("loc");
+      loc.innerHTML= window.location.href;
+      loc.innerHTML = window.location.hostname;
+      loc.innerHTML = window.location.pathname;
+      loc.innerHTML = window.location.protocol;
+      loc.innerHTML = window.location.assign("https://twitter.com/Drop_X_out");
+      
+
+
+    </script>
+
+  </body>
+</html>
