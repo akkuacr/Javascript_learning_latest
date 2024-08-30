@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PW Skills | Counter</title>
+   
+    <!-- imported the css file -->
+  
+  </head>
+  <body>
+     <form action ="" onsubmit="funSubmit()" >
+      Your Email Please:
+      <input type="email" id="input" onfocus="onfun()" onblur="onfun2()" onselect="selectfun()" required> 
+      <input type="submit" value="Submit">
+
+     </form>
+
+    <!-- imported js file below -->
+    <script >  
+      let input = document.getElementById("input") 
+      let submit
+      function onfun(){
+        console.log("yha ayaa");
+        input.style.backgroundColor = "red";
+        
+      }
+
+      function onfun2() {
+        input.style.backgroundColor = "yellow";        
+      }
+
+      funSubmit=()=>{
+        alert(`you submitted ${input.value}`)
+      }
+
+      selectfun = ()=>{
+        alert(`you selected something ${input.value}`)
+      }
+
+  
+    </script>
+  </body>
+</html>
