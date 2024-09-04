@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #loc {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    input[type="text"] {
+      width: 200px;
+      padding: 10px;
+      margin-right: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 5px 10px;
+      margin-left: 5px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .done {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .done {
+      text-decoration: line-through;
+    }
+  </style>
+
+  <title>Todo List</title>
+</head>
+
+<body>
+  <div id="loc">
+    <input type="text" id="write" placeholder="Enter a todo item">
+
+    <ul id="todo-list">
+      <!-- Todo items will be appended here -->
+    </ul>
+  </div>
+
+  <script>
+    let write = document.getElementById("write");
+    let todoList = document.getElementById("todo-list");
+
+    write.addEventListener("keyup", (e) => {
+      if (e.key === "Enter") {
+        addTodo(write.value.trim());
+        write.value = ''; // Clear the input after adding the todo item
+      }
+    });
+
+    function addTodo(val) {
+      // Create the list item (li) element
+      let listElement = document.createElement("li");
+      let para = document.createElement('p');
+      //listElement.innerHTML = val;
+      para.innerText = val;
+      listElement.append(para);
+      // Create the delete button
+      let button = document.createElement("button");
+      button.textContent = "Delete";
+
+      let button1 = document.createElement("button");
+      button1.textContent = "Done";
+      button1.addEventListener("click", () => {
+        para.classList.add("done")
+      })
+
+      // Add event listener to the button for deleting the todo item
+      button.addEventListener("click", () => {
+        listElement.remove(); // Only remove this specific list item
+      });
+
+      // Append the button to the list item
+      listElement.appendChild(button);
+      listElement.appendChild(button1);
+
+      // Append the list item to the todo list
+      todoList.appendChild(listElement);
+    }
+  </script>
+
+</body>
+
+</html>
