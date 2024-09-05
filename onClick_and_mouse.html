@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+    #myDiv{
+      width: 100px;
+      height: 100px;
+      background-color: aquamarine;
+      border: 2px solid;
+      border-radius: 10px;
+      margin-bottom: 4px;
+    }
+  </style>
+
+ </head>
+ <body>
+
+  <div id="myDiv" onmouseenter="changeColor()" onmouseleave="changeColor()"> 
+    hello
+  </div>
+
+  <button onclick="changeColor()">Change Color </button>
+  
+
+
+  <script>
+    function getRandomColor() {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+    const element = document.getElementById("myDiv")
+    function changeColor(){
+      element.style.backgroundColor = getRandomColor();
+    }
+  </script>
+  
+ </body>
+ </html>
