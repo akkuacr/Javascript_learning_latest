@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .child {
+      background-color: aqua;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="parent"> Top 5 Sigmas
+    <ul>
+      <li>Andrew Tate</li>
+      <li id="good">Keanu Reeves</li>
+      <li class="hero">Johnny Bravo</li>
+      <li>Johnny Depp</li>
+      <li>Shinchan</li>
+      <li class="hero">Akash Chand</li>
+
+    </ul>
+    <div class="child">
+      <h1>yes</h1>
+    </div>
+
+  </div>
+
+
+  <script>
+    const list = document.querySelector("ul");
+    const childToChange = list.children[1];
+    const newLi = document.createElement("li");
+    newLi.textContent = "gigaChad";
+    list.replaceChild(newLi, childToChange);
+
+    const element = document.querySelector(".parent");
+
+    // Ensure there is at least one child element to replace
+    if (element.children.length > 1) {
+      const child2 = element.children[1]; // Get the second child
+
+      const newOne = document.createElement("div"); // Create a new div element
+      newOne.style.backgroundColor = "black"; // Set its style
+
+      // Replace the existing child2 with newOne
+      element.replaceChild(newOne, child2);
+    } else {
+      console.log("Not enough children to replace.");
+    }
+  </script>
+
+
+</body>
+
+</html>
