@@ -17,31 +17,18 @@
       <li class="hero">Johnny Bravo</li>
       <li>Johnny Depp</li>
       <li>Shinchan</li>
-      <li class="hero">Akash Chand</li>
+      <li>Akash Chand</li>
 
     </ul>
   </div>
 
 
   <script>
-    console.log(document.querySelector('.hero').previousElementSibling.textContent);
-    const element = document.querySelector('.hero').previousElementSibling;
-    if(element==null){
-       console.log("previous sibling not found");
-    }else{
-       console.log(element.textContent);
-       element.style.backgroundColor="red";
-    }
-
-    //for example multiple classes ka naam hero rk k dekhte h
-
-    const arr= document.querySelectorAll('.hero');
-    arr.forEach((element)=>{
-      element.style.backgroundColor = "blue";
-      element.style.fontWeight = "bold";
-
-    })
-
+    var a = document.querySelector('.hero');
+    console.log(a.previousSibling);
+    console.log(a.nextSibling);
+    console.log(a.previousElementSibling);
+    console.log(a.nextElementSibling);
   </script>
 
 
