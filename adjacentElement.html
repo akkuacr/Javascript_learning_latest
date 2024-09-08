@@ -1,0 +1,37 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+ <body>
+
+  <div class="hero" style="background-color: yellow; border: 2px black solid;">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+    Nesciunt alias similique inventore omnis et quae molestiae, 
+    nemo consequatur vel voluptate non expedita eligendi? Tenetur
+     enim amet, accusamus debitis repellat dolor.
+  </div>
+
+  <script>
+
+    var target = document.querySelector('.hero');
+    var newE = document.createElement('p');
+    var lastE = document.createElement('p');
+    newE.textContent= 'Drop X Out';
+    //yeh div k suru hone se pehle aa jaega
+    target.insertAdjacentElement("beforebegin",newE);
+    lastE.textContent='ye after wala h';
+    //means end hone se pehle aa jaega yeh div k andar aa jaega
+    target.insertAdjacentElement("beforeend",lastE);
+
+    //similar are afterbegin, afterend
+    
+
+
+  </script>
+  
+ </body>
+ </html>
