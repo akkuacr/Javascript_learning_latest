@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div> Top 5 Sigmas
+    <ul>
+      <li>Andrew Tate</li>
+      <li>Keanu Reeves</li>
+      <li class="hero">Johnny Bravo</li>
+      <li>Johnny Depp</li>
+      <li>Shinchan</li>
+
+    </ul>
+
+
+  </div>
+
+  <script src="counter.js">
+
+
+    let a = document.querySelector('.hero');
+    a.innerHTML = "<b>Giga Chad</b>";
+    //aur agr concatenate krna ho toh
+
+
+    console.log(`iski inner html yeh h ${a.innerHTML}`);
+
+
+
+    //outer html m pura tag utha k  le ata h 
+
+    a.outerHTML = "<b>Giga Chad of Outer html</b>";
+    console.log(`iski outer html yeh h ${a.outerHTML}`);
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>
