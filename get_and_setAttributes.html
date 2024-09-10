@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+ <body>
+
+  <div id="hero" about="hell000"></div>
+
+  <script src="counter.js">
+     let hero = document.querySelector('#hero');
+ console.log(hero.getAttribute("about"));
+
+ //similarly u can use setattribute
+ hero.setAttribute("example",123);
+ console.log(hero.getAttribute("example"));
+ 
+ console.log(hero.outerHTML);
+ for(let attr of hero.attributes)
+ {
+    console.log(attr.name);
+    console.log(attr.value);
+ }
+ 
+  </script>
+  
+ </body>
+ </html>
